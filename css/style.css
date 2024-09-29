@@ -9,13 +9,34 @@ body {
     min-height: 100vh; /* Mantener el footer al fondo */
 }
 header {
-    text-align: center; /* Centrar texto */
+    position: relative; /* Permite el uso de posición absoluta dentro del header */
 }
 
 header img {
     width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
     height: auto; /* Mantiene la proporción de la imagen */
-    display: block; /* Asegura que no haya espacios adicionales alrededor */
+    object-fit: cover; /* Cubre el área del contenedor sin distorsionar la imagen */
+}
+
+header .absolute {
+    position: absolute; /* Posiciona el contenido de manera absoluta */
+    top: 20%; /* Ajusta según sea necesario */
+    left: 0;
+    width: 100%; /* Asegura que el fondo cubra todo el ancho */
+    padding: 16px; /* Espaciado interno */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejor legibilidad */
+    color: white; /* Color del texto */
+    text-align: center; /* Centrar el texto */
+}
+
+header h1 {
+    font-size: 2.5rem; /* Tamaño de la fuente */
+    margin: 0; /* Eliminar márgenes por defecto */
+}
+
+header p {
+    font-size: 1.25rem; /* Tamaño de la fuente */
+    margin: 0; /* Eliminar márgenes por defecto */
 }
 
 
