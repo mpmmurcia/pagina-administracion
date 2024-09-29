@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ximena Silva - Administración</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="./js/script.js" defer></script>
+
+</head>
+<body class="bg-gray-100 font-roboto">
+    <header class="relative">
+        <img src="/img/header-ad.jpg" alt="Imagen de encabezado" class="w-full h-64 object-cover">
+        <div class="absolute top-0 left-0 p-4">
+            <h1 class="text-4xl font-bold">Maria Ximena Silva</h1>
+            <p class="text-lg">Licenciada en Administración</p>
+        </div>
+    </header>
+
+    <main class="p-4">
+        <!-- Sección Sobre Mí -->
+        <section class="about my-8 bg-white p-6 rounded-lg shadow-md flex">
+            <img src="img/xime.ad.jpg" alt="Imagen sobre mí" class="w-1/3 h-auto rounded-lg mr-4">
+            <div class="text-content w-2/3">
+                <h2 class="text-2xl font-bold mb-4">Sobre Mí</h2>
+                <p>Soy una profesional apasionada por la administración y la contabilidad, con una sólida formación y experiencia en la gestión de empresas grandes y PYMEs.</p>
+            </div>
+        </section>
+
+        <!-- Sección Mis Estudios -->
+        <section class="about my-8 bg-white p-6 rounded-lg shadow-md flex">
+            <div class="text-content w-2/3">
+                <h2 class="text-2xl font-bold mb-4">Mis estudios</h2>
+                <p>Tengo una sólida formación académica en administración y contabilidad, con un enfoque en la gestión de empresas grandes y PYMEs.</p>
+            </div>
+            <img src="img/univ.ad.webp" alt="Imagen de mis estudios" class="w-1/3 h-auto rounded-lg ml-4">
+        </section>
+
+
+
+
+        <!--Servicios-->
+        <section class="services my-8 bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold mb-4">Servicios</h2>
+            <ul class="list-disc pl-6">
+                <li>
+                    <button class="toggle-info" data-info="info1">Consultoría en Administración y Contabilidad</button>
+                    <div id="info1" class="service-info">
+                        <p>Ofrecemos consultoría especializada para optimizar la gestión administrativa y contable de tu empresa.</p>
+                    </div>
+                </li>
+                <li>
+                    <button class="toggle-info" data-info="info2">Gestión de nómina y pagos de sueldos</button>
+                    <div id="info2" class="service-info">
+                        <p>Nos encargamos del procesamiento de nóminas, asegurando el pago correcto y puntual de los sueldos.</p>
+                    </div>
+                </li>
+                <li>
+                    <button class="toggle-info" data-info="info3">Asesoramiento para PYMEs y empresas grandes</button>
+                    <div id="info3" class="service-info">
+                        <p>Brindamos asesoramiento estratégico para el crecimiento y mejora de PYMEs y grandes empresas.</p>
+                    </div>
+                </li>
+                <li>
+                    <button class="toggle-info" data-info="info4">Optimización de procesos administrativos</button>
+                    <div id="info4" class="service-info">
+                        <p>Te ayudamos a mejorar la eficiencia de tus procesos administrativos, reduciendo costos y tiempos.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        
+        
+        
+
+        <!-- Sección de tarjetas -->
+        <section class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+            <!-- Tarjeta: Controla tu inventario -->
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front bg-white shadow-lg rounded-lg p-6">
+                        <img src="img/stock.ad2.jpg" alt="Controla tu inventario" class="w-full h-32 object-cover mb-4 rounded-lg">
+                        <h3 class="text-xl font-bold mb-2">Controla tu inventario</h3>
+                        <p>Administrá productos y stock por sucursal y almacén. Analizá tu información dinámicamente.</p>
+                    </div>
+                    <div class="card-back bg-gray-200 shadow-lg rounded-lg p-6">
+                        <h3 class="text-xl font-bold mb-2">Más información</h3>
+                        <p>¡Optimiza tu gestión de productos y maximiza tus ganancias! <br>No dejes que un mal control de inventario afecte tu rentabilidad. ¡Descubre cómo podemos ayudarte a transformar la gestión de tu inventario y lleva tu negocio al siguiente nivel!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Tarjeta: Ventas móviles -->
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front bg-white shadow-lg rounded-lg p-6">
+                        <img src="img/conexion.ad.jpg" alt="Ventas móviles" class="w-full h-32 object-cover mb-4 rounded-lg">
+                        <h3 class="text-xl font-bold mb-2">Ventas móviles</h3>
+                        <p>Tomá pedidos con tu celular en cualquier momento y lugar. Ideal para vender en la calle.</p>
+                    </div>
+                    <div class="card-back bg-gray-200 shadow-lg rounded-lg p-6">
+                        <h3 class="text-xl font-bold mb-2">Más información</h3>
+                        <p>¡Lleva tu negocio a donde quiera que vayas! Con nuestra solución de ventas móviles, podrás tomar pedidos en cualquier momento y lugar, facilitando la interacción con tus clientes y mejorando tu eficiencia</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Tarjeta: Sucursales conectadas -->
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front bg-white shadow-lg rounded-lg p-6">
+                        <img src="img/paises.ad.jpg" alt="Sucursales conectadas" class="w-full h-32 object-cover mb-4 rounded-lg">
+                        <h3 class="text-xl font-bold mb-2">Sucursales conectadas</h3>
+                        <p>Mantené tus sucursales conectadas con o sin internet.</p>
+                    </div>
+                    <div class="card-back bg-gray-200 shadow-lg rounded-lg p-6">
+                        <h3 class="text-xl font-bold mb-2">Más información</h3>
+                        <p>¡Mantén tu negocio unificado y eficiente, sin importar la distancia! Con nuestro sistema de sucursales conectadas, podrás integrar y gestionar todas tus filiales de manera centralizada. <br>No permitas que la distancia sea un obstáculo para tu éxito. Conéctate con todas tus sucursales y optimiza la gestión de tu empresa</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Tarjeta: Servicio técnico -->
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front bg-white shadow-lg rounded-lg p-6">
+                        <img src="img/fabrica-ad.jpg" alt="Servicio técnico" class="w-full h-32 object-cover mb-4 rounded-lg">
+                        <h3 class="text-xl font-bold mb-2">Servicio técnico</h3>
+                        <p>Presupuestos y facturas de servicio integrados con 1 clic. Ideal para talleres.</p>
+                    </div>
+                    <div class="card-back bg-gray-200 shadow-lg rounded-lg p-6">
+                        <h3 class="text-xl font-bold mb-2">Más información</h3>
+                        <p>¡Asegura la continuidad de tu negocio con nuestro servicio técnico especializado! No dejes que la falta de un buen servicio técnico afecte tu reputación. Aumente la satisfacción del cliente y mejore la eficiencia operativa de su negocio. ¡Descubre cómo nuestro servicio técnico puede ayudarte a mantener todo en funcionamiento sin problemas!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Tarjeta: Distribución -->
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front bg-white shadow-lg rounded-lg p-6">
+                        <img src="img/stock.ad.jpg" alt="Distribución" class="w-full h-32 object-cover mb-4 rounded-lg">
+                        <h3 class="text-xl font-bold mb-2">Distribución</h3>
+                        <p>Hojas de ruta, control de cargas y revisiones. Pensado para distribuidoras.</p>
+                    </div>
+                    <div class="card-back bg-gray-200 shadow-lg rounded-lg p-6">
+                        <h3 class="text-xl font-bold mb-2">Más información</h3>
+                        <p>¡Optimiza la logística de tu negocio y asegura la entrega puntual de tus productos! No permitas que una mala distribución afecte la satisfacción de tus clientes. Mejora la eficiencia de tu logística y transforma tu cadena de suministro. ¡Descubre cómo nuestro sistema de distribución puede llevar tu negocio al siguiente nivel!</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Tarjeta: Tesorería -->
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front bg-white shadow-lg rounded-lg p-6">
+                        <img src="img/tesoreria.ad.jpg" alt="Tesorería" class="w-full h-32 object-cover mb-4 rounded-lg">
+                        <h3 class="text-xl font-bold mb-2">Tesorería</h3>
+                        <p>Controlá tus fondos y ahorros de manera simple. Registrá cobros y pagos.</p>
+                    </div>
+                    <div class="card-back bg-gray-200 shadow-lg rounded-lg p-6">
+                        <h3 class="text-xl font-bold mb-2">Más información</h3>
+                        <p>¡Simplifica la gestión de tus fondos y optimiza el control financiero de tu negocio! No dejes que la falta de control financiero afecte la salud de tu negocio. Mejora tu gestión de tesorería y asegura un crecimiento sostenible. ¡Descubre cómo nuestro sistema puede transformar tu administración financiera y llevar tu negocio al siguiente nivel!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+
+
+
+
+
+
+    </main>
+
+    <!-- Sección Contacto -->
+    <section class="contact my-8 bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-4">Contacto</h2>
+        <p>Puedes contactarme a través de mi correo electrónico: <a href="mailto:xime_18@hotmail.com" class="text-blue-600">xime_18@hotmail.com</a></p>
+    </section>
+
+    <!-- Ícono de WhatsApp flotante -->
+<a href="https://wa.me/5491166120635" id="whatsapp-icon" target="_blank">
+    
+  
+    <img src="img/whatsapp.png" alt="WhatsApp" />
+    </a>
+
+
+
+    <!--footer-->
+    <footer class="footer">
+        <p>&copy; 2024 Ximena Silva. Todos los derechos reservados.</p>
+    </footer>
+
+    
+</body>
+</html>

@@ -1,0 +1,178 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Mantener el footer al fondo */
+}
+
+
+
+header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+main {
+    padding: 20px;
+    flex: 1; /* Permitir que el main ocupe el espacio restante */
+}
+
+h2 {
+    color: #090909;
+}
+
+
+
+.about {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el contenido */
+}
+
+.about img {
+    max-width: 100%; /* Asegura que la imagen no desborde su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 1rem; /* Espaciado entre la imagen y el texto */
+}
+
+
+
+
+
+
+.services, .contact {
+    background: rgb(176, 173, 175);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer {
+    background-color:  rgb(255, 253, 253); /* Color de fondo del pie de página */
+    color: rgb(0, 0, 0); /* Color del texto */
+    padding: 16px 0; /* Espaciado interno */
+    text-align: center; /* Centrar texto */
+}
+
+/* Estilos de las tarjetas */
+
+.card-inner {
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+/* Estilo de la imagen */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fbfafa; /* Color de fondo para el contenedor de la imagen */
+    height: 160px; /* Ajusta la altura según sea necesario */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.image {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain; /* Mantiene la proporción de la imagen */
+}
+
+/* Estilo de botones */
+.back-button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #007bff; /* Color principal */
+    color: white; /* Color del texto */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.5s; /* Transición suave */
+}
+
+.back-button:hover {
+    background-color: #95989b; /* Color de fondo en hover */
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 16px); /* Dos tarjetas por fila en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%; /* Una tarjeta por fila en móviles */
+    }
+}
+
+.service-info {
+    display: none; /* Oculto por defecto */
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #939596;
+}
+
+
+
+/*whatsapp*/
+
+
+#whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px; /* Ajusta el tamaño según sea necesario */
+    transition: transform 0.2s;
+    animation: bounce 1s infinite;
+}
+
+#whatsapp-icon img {
+    width: 100%;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Ajusta la altura del brinco */
+    }
+}
