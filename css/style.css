@@ -9,43 +9,37 @@ body {
     min-height: 100vh; /* Mantener el footer al fondo */
 }
 
-
-
+/* Encabezado de la página */
 header img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto; /* Cambiado para mantener la proporción de la imagen */
 }
 
-
-
+/* Estilo del contenido principal */
 main {
     padding: 20px;
     flex: 1; /* Permitir que el main ocupe el espacio restante */
 }
 
+/* Estilos de los encabezados */
 h2 {
     color: #090909;
 }
 
-
-
+/* Estilo de la sección 'about' */
 .about {
     display: flex;
-    align-items: center; /* Alinea verticalmente el contenido */
+    flex-direction: column; /* Cambiado a columna en pantallas pequeñas */
+    align-items: center; /* Centrar el contenido */
 }
 
 .about img {
-    max-width: 100%; /* Asegura que la imagen no desborde su contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    margin-right: 1rem; /* Espaciado entre la imagen y el texto */
+    max-width: 100%;
+    height: auto;
+    margin: 0 0 1rem 0; /* Espaciado entre la imagen y el texto */
 }
 
-
-
-
-
-
+/* Estilo de las secciones de servicios y contacto */
 .services, .contact {
     background: rgb(176, 173, 175);
     padding: 20px;
@@ -54,30 +48,33 @@ h2 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilo de listas */
 ul {
     list-style-type: none;
     padding: 0;
 }
 
+/* Estilo del pie de página */
 footer {
-    background-color:  rgb(255, 253, 253); /* Color de fondo del pie de página */
-    color: rgb(0, 0, 0); /* Color del texto */
-    padding: 16px 0; /* Espaciado interno */
-    text-align: center; /* Centrar texto */
+    background-color: rgb(255, 253, 253);
+    color: rgb(0, 0, 0);
+    padding: 16px 0;
+    text-align: center;
 }
 
 /* Estilos de las tarjetas */
-
 .card-inner {
     position: relative;
     transition: transform 0.6s;
     transform-style: preserve-3d;
 }
 
+/* Efecto de rotación en hover */
 .card:hover .card-inner {
     transform: rotateY(180deg);
 }
 
+/* Estilos de la parte de atrás de las tarjetas */
 .card-back {
     position: absolute;
     top: 0;
@@ -92,25 +89,20 @@ footer {
     height: 100%;
 }
 
-
-
-
-
-
-/*Estilo de la imagen*/
+/* Estilo de la imagen */
 .image-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fbfafa; /* Color de fondo para el contenedor de la imagen */
-    height: 160px; /* Ajusta la altura según sea necesario */
-    border-radius: 8px; /* Bordes redondeados */
+    background-color: #fbfafa;
+    height: 160px;
+    border-radius: 8px;
 }
 
 .image {
     max-height: 100%;
     max-width: 100%;
-    object-fit: contain; /* Mantiene la proporción de la imagen */
+    object-fit: contain;
 }
 
 /* Estilo de botones */
@@ -118,11 +110,11 @@ footer {
     margin-top: 10px;
     padding: 8px 12px;
     background-color: #007bff; /* Color principal */
-    color: white; /* Color del texto */
+    color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.5s; /* Transición suave */
+    transition: background-color 0.5s;
 }
 
 .back-button:hover {
@@ -132,16 +124,33 @@ footer {
 /* Media Queries para responsividad */
 @media (max-width: 768px) {
     .card {
-        flex: 1 1 calc(50% - 16px); /* Dos tarjetas por fila en pantallas pequeñas */
+        flex: 1 1 calc(50% - 16px); /* Dos tarjetas por fila en tablets */
+        margin: 0 8px; /* Espaciado lateral */
+    }
+
+    /* Cambiar la dirección de la sección about a columna */
+    .about {
+        flex-direction: column;
     }
 }
 
 @media (max-width: 480px) {
     .card {
         flex: 1 1 100%; /* Una tarjeta por fila en móviles */
+        margin: 0; /* Sin margen en móviles */
+    }
+
+    header img {
+        height: auto; /* Asegura que la imagen del encabezado sea proporcional */
+    }
+
+    .about img {
+        max-width: 80%; /* Limitar el tamaño de la imagen en móviles */
+        margin: 0 auto; /* Centrar la imagen */
     }
 }
 
+/* Servicio de información oculto */
 .service-info {
     display: none; /* Oculto por defecto */
     margin-top: 10px;
@@ -150,16 +159,12 @@ footer {
     border-left: 4px solid #939596;
 }
 
-
-
-/*whatsapp*/
-
-
+/* WhatsApp */
 #whatsapp-icon {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 60px; /* Ajusta el tamaño según sea necesario */
+    width: 60px; /* Tamaño ajustable */
     transition: transform 0.2s;
     animation: bounce 1s infinite;
 }
@@ -168,6 +173,7 @@ footer {
     width: 100%;
 }
 
+/* Animación de rebote */
 @keyframes bounce {
     0%, 100% {
         transform: translateY(0);
