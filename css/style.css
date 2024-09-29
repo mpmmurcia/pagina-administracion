@@ -8,12 +8,16 @@ body {
     flex-direction: column;
     min-height: 100vh; /* Mantener el footer al fondo */
 }
-
-/* Encabezado de la página */
-header img {
-    width: 100%;
-    height: auto; /* Cambiado para mantener la proporción de la imagen */
+header {
+    text-align: center; /* Centrar texto */
 }
+
+header img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Asegura que no haya espacios adicionales alrededor */
+}
+
 
 /* Estilo del contenido principal */
 main {
